@@ -1,7 +1,10 @@
 const {
     returnTwo,
     greeting,
-    add
+    add,
+    multiply,
+    divide,
+    subtract
 } = require('./functions');
 
 test('returnTwo result should equal 2', () => {
@@ -20,13 +23,21 @@ describe('greeting tests', () => {
     });
 });
 
-describe('add tests', () => {
-    test('add(1,2) should equal 3', () => {
-        let result = add(1, 2);
-        expect(result).toEqual(3);
-    });
+describe('Math tests', () => {
     test('add(5,9) should equal 14', () => {
         let result = add(5, 9);
         expect(result).toEqual(14);
+    });
+    test('multiply(5,9) should equal 45', () => {
+        let result = multiply(5, 9);
+        expect(result).toEqual(45);
+    });
+    test('divide(45,9) should equal 5', () => {
+        let result = divide(45, 9);
+        expect(result).toEqual(5);
+    });
+    test('subtract(9,5) should equal 4', () => {
+        let result = subtract(9, 5);
+        expect(result).toEqual(4);
     });
 });
